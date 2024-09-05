@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('IMG-20221123-WA0018.jpg');
+   
+    color: white;
+  }
+  
+  .app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    backdrop-filter: blur(8px); /* Blurs the background slightly */
+  }
+  
+  .quote-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 600px;
+    color: #ff6f61;
+  }
+  
+  .quote-box h1 {
+    font-size: 2rem;
+    animation: fadeIn 3s ease-in-out infinite;
+  }
+  
+  .next-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+  
+  .question-box {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .yes-button,
+  .no-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .no-button {
+    position: absolute;
+  }
+  
+  .hearts {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .heart {
+    width: 50px;
+    height: 50px;
+    background-color: #ff6f61;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(45deg);
+    animation: float 5s infinite ease-in-out;
+  }
+  
+  .heart:after,
+  .heart:before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: #ff6f61;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .heart:before {
+    top: -25px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 25px;
+    top: 0;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateX(0) translateY(0) rotate(45deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-50px) translateY(-800px) rotate(45deg);
+      opacity: 0;
+    }
+  }
+  
+  .heart:nth-child(2) {
+    animation-duration: 6s;
+    left: 40%;
+  }
+  
+  .heart:nth-child(3) {
+    animation-duration: 7s;
+    left: 60%;
+  }
+  
